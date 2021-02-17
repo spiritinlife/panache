@@ -20,20 +20,20 @@ class TypographyPreview extends StatelessWidget {
       child: ListView(
         children: [
           Text(
-            'Headline\nThe quick brown fox jumps over the lazy dog\n',
-            style: textTheme.headline,
+            'headline5\nThe quick brown fox jumps over the lazy dog\n',
+            style: textTheme.headline5,
           ),
           Text(
-            'Subhead\nThe quick brown fox jumps over the lazy dog\n',
-            style: textTheme.subhead,
+            'subtitle1\nThe quick brown fox jumps over the lazy dog\n',
+            style: textTheme.subtitle1,
           ),
           Text(
-            'Title\nThe quick brown fox jumps over the lazy dog\n',
-            style: textTheme.title,
+            'headline6\nThe quick brown fox jumps over the lazy dog\n',
+            style: textTheme.headline6,
           ),
           Text(
-            'Subtitle\nThe quick brown fox jumps over the lazy dog\n',
-            style: textTheme.subtitle,
+            'subtitle2\nThe quick brown fox jumps over the lazy dog\n',
+            style: textTheme.subtitle2,
           ),
           Text(
             'Caption\nThe quick brown fox jumps over the lazy dog\n',
@@ -45,11 +45,11 @@ class TypographyPreview extends StatelessWidget {
           ),
           Text(
             'Body 1\nThe quick brown fox jumps over the lazy dog\nThe quick brown fox jumps over the lazy dog\nThe quick brown fox jumps over the lazy dog\n',
-            style: textTheme.body1,
+            style: textTheme.bodyText2,
           ),
           Text(
             'Body 2\nThe quick brown fox jumps over the lazy dog\nThe quick brown fox jumps over the lazy dog\nThe quick brown fox jumps over the lazy dog\n',
-            style: textTheme.body2,
+            style: textTheme.bodyText1,
           ),
           FlatButton(
               child: Text(
@@ -59,19 +59,19 @@ class TypographyPreview extends StatelessWidget {
               onPressed: () {}),
           Text(
             'Display 1',
-            style: textTheme.display1,
+            style: textTheme.headline4,
           ),
           Text(
             'Display 2',
-            style: textTheme.display2,
+            style: textTheme.headline3,
           ),
           Text(
             'Display 3',
-            style: textTheme.display3,
+            style: textTheme.headline2,
           ),
           Text(
             'Display 4',
-            style: textTheme.display4,
+            style: textTheme.headline1,
           ),
         ],
       ),

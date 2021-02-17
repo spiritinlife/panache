@@ -111,7 +111,7 @@ class ThemePreviewAppState extends State<ThemePreviewApp>
                   )
               /*BottomNavigationBarItem(
                 icon: Icon(item['icon']),
-                title: Text(item['label']),
+                headline6: Text(item['label']),
               )*/
               )
           .toList();

@@ -2,10 +2,9 @@ name: panache_ui
 description: A new Flutter project.
 version: 0.0.1
 author:
-homepage:
 
 environment:
-  sdk: ">=2.2.2 <3.0.0"
+  sdk: ">=2.6.0 <3.0.0"
 
 dependencies:
   flutter:
@@ -14,7 +13,7 @@ dependencies:
   panache_core:
     path: ../panache_core
 
-  provider: ^3.1.0
+  provider: ^4.3.3
 
   #panache_services:
     #path: ../panache_services

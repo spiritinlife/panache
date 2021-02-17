@@ -3,9 +3,11 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:panache/mobile_link_service.dart';
 import 'package:panache_core/panache_core.dart';
 import 'package:panache_services/panache_services.dart';
 import 'package:path_provider/path_provider.dart';
+import 'package:provider/provider.dart';
 import 'package:scoped_model/scoped_model.dart';
 
 import 'package:panache_ui/panache_ui.dart';
@@ -41,14 +43,19 @@ class PanacheApp extends StatelessWidget {
     final theme = Theme.of(context);
     return ScopedModel<ThemeModel>(
       model: themeModel,
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        theme: buildAppTheme(theme, panachePrimarySwatch),
-        home: LaunchScreen(model: themeModel),
-        routes: {
-          '/home': (context) => LaunchScreen(model: themeModel),
-          '/editor': (context) => PanacheEditorScreen(),
-        },
+      child: MultiProvider(
+        child: MaterialApp(
+          debugShowCheckedModeBanner: false,
+          theme: buildAppTheme(theme, panachePrimarySwatch),
+          home: LaunchScreen(model: themeModel),
+          routes: {
+            '/home': (context) => LaunchScreen(model: themeModel),
+            '/editor': (context) => PanacheEditorScreen(),
+          },
+        ),
+        providers: <SingleChildCloneableWidget>[
+          Provider<LinkService>.value(value: MobileLinkService())
+        ],
       ),
     );
   }

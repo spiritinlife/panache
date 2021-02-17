@@ -3,7 +3,6 @@ import 'package:panache_core/panache_core.dart';
 
 import 'web_persistence_bridge.dart';
 
-const _themeKey = 'themes';
 const _panelsKey = 'panelsState';
 const _positionKey = 'scrollPosition';
 
@@ -29,8 +28,6 @@ class WebLocalData implements LocalStorage {
   /// get the last scroll position ( mobile layout)
   double get scrollPosition => double.parse(jsGet(_positionKey) ?? '0');
 
-  /// clear local themes list
-  PanacheTheme _themeDataFromJson(String data) => PanacheTheme.fromJson(data);
 
   // FIXME
   /// initialisation du stockage

@@ -24,9 +24,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     // TODO: Move this logic to a Flutter framework application delegate.
     // See https://github.com/flutter/flutter/issues/32419.
     let appName = applicationName()
-    window.title = appName
+    window.headline6 = appName
     for menuItem in applicationMenu.items {
-      menuItem.title = menuItem.title.replacingOccurrences(of: "APP_NAME", with: appName)
+      menuItem.headline6 = menuItem.headline6.replacingOccurrences(of: "APP_NAME", with: appName)
     }
   }
 

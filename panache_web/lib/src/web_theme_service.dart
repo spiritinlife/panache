@@ -29,8 +29,6 @@ class WebThemeService extends ThemeService<dynamic, dynamic> {
       });
   }
 
-  ThemeData _localize(ThemeData theme) =>
-      ThemeData.localize(theme, Typography.englishLike2018);
 
   void initTheme(
       {MaterialColor primarySwatch: Colors.blue,
@@ -55,7 +53,6 @@ class WebThemeService extends ThemeService<dynamic, dynamic> {
       themeExporter(code, filename);
 
   void saveTheme(String filename) async {
-    final map = themeToMap(_theme);
 
     if (_dir == null) {
       print('!!!! ThemeService.saveTheme... IMPLEMENT ME');

@@ -150,11 +150,11 @@ class InputDecorationThemePanel extends StatelessWidget {
           ),
           SwitcherControl(
               label: 'Has floating label',
-              checked: inputTheme.hasFloatingPlaceholder,
+              checked: inputTheme.floatingLabelBehavior == FloatingLabelBehavior.always,
               onChange: (value) =>
                   _updateInputDecorationTheme(_copyInputDecorationThemeWith(
                     inputTheme,
-                    hasFloatingPlaceholder: value,
+                    floatingLabelBehavior: FloatingLabelBehavior.always,
                   ))),
           Divider(),
           _buildTextStyleControl(
@@ -294,7 +294,7 @@ InputDecorationTheme _copyInputDecorationThemeWith(
   bool filled,
   InputBorder focusedBorder,
   InputBorder focusedErrorBorder,
-  bool hasFloatingPlaceholder,
+  FloatingLabelBehavior floatingLabelBehavior,
   TextStyle helperStyle,
   TextStyle hintStyle,
   bool isCollapsed,
@@ -316,8 +316,8 @@ InputDecorationTheme _copyInputDecorationThemeWith(
     filled: filled ?? theme.filled,
     focusedBorder: focusedBorder ?? theme.focusedBorder,
     focusedErrorBorder: focusedErrorBorder ?? theme.focusedErrorBorder,
-    hasFloatingPlaceholder:
-        hasFloatingPlaceholder ?? theme.hasFloatingPlaceholder,
+    floatingLabelBehavior:
+        floatingLabelBehavior ?? theme.floatingLabelBehavior,
     helperStyle: helperStyle ?? theme.helperStyle,
     hintStyle: hintStyle ?? theme.hintStyle,
     isCollapsed: isCollapsed ?? theme.isCollapsed,

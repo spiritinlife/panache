@@ -46,7 +46,7 @@ class PanacheApp extends StatelessWidget {
             '/editor': (context) => PanacheEditorScreen(),
           },
         ),
-        providers: <SingleChildCloneableWidget>[
+        providers: [
           Provider<LinkService>.value(value: WebLinkService())
         ],
       ),
